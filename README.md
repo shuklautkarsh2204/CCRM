@@ -101,8 +101,6 @@ After selecting an option, you will be guided through further sub-menus and acti
 	java -ea -cp bin edu.ccrm.cli.App
 	```
 
-## Sample Commands & Data Files
-- See `USAGE.md` and `test-data/` for sample CSVs and usage examples.
 
 ## Screenshots
 - JDK installation verification
@@ -177,15 +175,15 @@ After selecting an option, you will be guided through further sub-menus and acti
 ### students.csv
 ```
 id,regNo,fullName,email
-S001,2023A01,John Doe,john@example.com
-S002,2023A02,Jane Smith,jane@example.com
+S001,24BCE10990,Utkarsh Shukla,utkarsh.24bce10990@vitbhopal.ac.in
+S002,24BCE11001,Harshwardhan Singh Chauhan,harshwardhan.24bce11001@vitbhopal.ac.in
 ```
 
 ### courses.csv
 ```
 code,title,credits,instructor,semester,department
-CSE101,Intro to CS,4,Dr. Alan,SPRING,CSE
-MAT201,Calculus II,3,Dr. Beth,FALL,MATH
+CSE1021,Intro to Problem Solving and Programming,1,Dr.S.Poonkuntran,SCOPE
+MAT1003,Calculus,1,Dr. Yogesh Shukla,SASL
 ```
 
 ## Notes
