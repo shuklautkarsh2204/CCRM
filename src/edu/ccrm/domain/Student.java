@@ -28,13 +28,9 @@ public class Student extends Person {
     public void deactivate() { this.status = Status.INACTIVE; }
     public void enrollCourse(CourseEnrollment ce) { enrolledCourses.add(ce); }
     public void unenrollCourse(CourseEnrollment ce) { enrolledCourses.remove(ce); }
-
-    @Override
     public String getProfile() {
         return String.format("Student Profile: %s\nRegNo: %s\nEmail: %s\nStatus: %s\nEnrolled: %d courses", fullName, regNo, email, status, enrolledCourses.size());
     }
-
-    @Override
     public String toString() {
         return getProfile();
     }

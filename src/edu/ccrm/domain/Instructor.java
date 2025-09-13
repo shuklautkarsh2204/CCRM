@@ -10,8 +10,6 @@ public class Instructor extends Person {
 
     public String getDepartment() { return department; }
     public void setDepartment(String department) { this.department = department; }
-
-    @Override
     public String getProfile() {
         return String.format("Instructor Profile: %s\nDepartment: %s\nEmail: %s", fullName, department, email);
     }

@@ -34,7 +34,6 @@ public class Course {
     public void setDepartment(String department) { this.department = department; }
     public void deactivate() { this.active = false; }
 
-    @Override
     public String toString() {
         return String.format("Course: %s - %s (%d credits) [%s]", code, title, credits, department);
     }
