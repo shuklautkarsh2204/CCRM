@@ -101,15 +101,6 @@ After selecting an option, you will be guided through further sub-menus and acti
 	java -ea -cp bin edu.ccrm.cli.App
 	```
 
-
-## Screenshots
-- JDK installation verification
-
-- Eclipse project setup & run
-- Program running (menus, sample operations)
-- Exports/Backups folder structure
-
-
 ## Acknowledgements
 - Every single line of code is written by upmost dedication...
 ## Sample Of How This Thing Works
@@ -132,31 +123,43 @@ After selecting an option, you will be guided through further sub-menus and acti
 
 ### Add a Student
 - Select "Manage Students"
+- Select "Add Student"
 - Enter details: ID, RegNo, Name, Email
+![Add Student Demo](add_student_demo.png)
 
 ### List Students
 - Select "Manage Students"
 - Choose "List Students"
+![List Student Demo](list_students_demo.png)
 
 ### Add a Course
 - Select "Manage Courses"
+- Select "Add Course"
 - Enter details: Code, Title, Credits, Instructor, Semester, Department
+![Add Course Demo](add_course_demo.png)
 
 ### Enroll Student in Course
 - Select "Enrollment & Grading"
+- Select "Enroll Student"
 - Enter Student ID and Course Code
+![Enrolling Demo](enrolling_demo.png)
 
 ### Record Marks & Compute GPA
 - Select "Enrollment & Grading"
+- Select "Record Marks"
 - Enter Student ID, Course Code, Marks, Grade
+![Adding Marks Demo](adding_marks_demo.png)
 
 ### Print Transcript
 - Select "Manage Students"
 - Choose "Print Transcript" for a student
+![Transcript Generation Demo](transcrip_generation_demo.png)
+
 
 ### Import Students/Courses from CSV
 - Select "Import/Export Data"
-- Provide file path (e.g., `test-data/students.csv`)
+- For students: Provide file path (e.g., `test-data/students.csv`)
+- For courses: Choose "Import Courses from CSV" and provide file path (e.g., `test-data/courses.csv`). Courses will be added to the system and a success message will be shown.
 
 ### Export Data
 - Select "Import/Export Data"
@@ -169,6 +172,7 @@ After selecting an option, you will be guided through further sub-menus and acti
 ### Reports
 - Select "Reports"
 - View top students, GPA distribution, etc.
+![Report Demo](report_demo.png)
 
 ## Sample Data Files
 
@@ -179,12 +183,14 @@ S001,24BCE10990,Utkarsh Shukla,utkarsh.24bce10990@vitbhopal.ac.in
 S002,24BCE11001,Harshwardhan Singh Chauhan,harshwardhan.24bce11001@vitbhopal.ac.in
 ```
 
+
 ### courses.csv
 ```
-code,title,credits,instructor,semester,department
-CSE1021,Intro to Problem Solving and Programming,1,Dr.S.Poonkuntran,SCOPE
-MAT1003,Calculus,1,Dr. Yogesh Shukla,SASL
+code,title,credits
+CSE1021,Intro to Problem Solving and Programming,1
+MAT1003,Calculus,1
 ```
+*Additional columns (instructor, semester, department) are ignored during CSV import for courses.*
 
 ## Notes
 - All file paths are relative to the project root.

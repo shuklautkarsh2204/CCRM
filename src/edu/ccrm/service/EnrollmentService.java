@@ -1,9 +1,33 @@
+
 package edu.ccrm.service;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 import edu.ccrm.domain.*;
 import java.util.*;
 
 public class EnrollmentService {
+
+    public void importCoursesFromCSV(String csvFilePath) {
+        try (BufferedReader br = new BufferedReader(new FileReader(csvFilePath))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] fields = line.split(",");
+                if (fields.length >= 3) {
+                    String code = fields[0].trim();
+                    String name = fields[1].trim();
+                    int credits = Integer.parseInt(fields[2].trim());
+                    Course course = new Course(code, name, credits);
+                    courseService.addCourse(course);
+                }
+            }
+            System.out.println("Courses imported successfully from CSV.");
+        } catch (IOException | NumberFormatException e) {
+            System.out.println("Error importing courses: " + e.getMessage());
+        }
+    }
     private final StudentService studentService;
     private final CourseService courseService;
     private final int MAX_CREDITS = 30;

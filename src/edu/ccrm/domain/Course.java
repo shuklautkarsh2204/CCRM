@@ -2,6 +2,13 @@ package edu.ccrm.domain;
 
 public class Course {
     private final String code;
+    // Constructor for CSV import and EnrollmentService
+    public Course(String code, String title, int credits) {
+        this.code = code;
+        this.title = title;
+        this.credits = credits;
+        this.active = true;
+    }
     private String title;
     private int credits;
     private Instructor instructor;
